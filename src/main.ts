@@ -11,6 +11,9 @@ async function bootstrap() {
       transform: false, //Usado para converter os dados de entrada para o formato correto
     }),
   );
+
+  app.enableCors();
+
   await app.listen(process.env.PORT ?? 3000);
 }
 bootstrap();
