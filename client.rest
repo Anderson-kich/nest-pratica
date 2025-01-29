@@ -1,0 +1,50 @@
+@baseUrl = http://localhost:3000
+
+# @name RecadosController
+
+GET {{baseUrl}}/user/list
+
+###
+GET {{baseUrl}}/user/e88fda3d-22e4-49bb-9257-5bc2f4c0a783
+###
+
+POST {{baseUrl}}/user/create
+Content-Type: application/json
+
+ {
+    "name": "kich",
+    "email": "kich2@hotmail.com" ,
+    "password": "123456",
+    "endereco": "Rua Theophilo Zanutto"
+  }
+###
+PATCH  {{baseUrl}}/user/update/bf32dd2b-f5bf-4a6a-854f-d3db2ea476a5
+Content-Type: application/json
+
+  {
+    "name": "Kich",
+    "email": "kich42@hotmail.com" ,
+    "password": "123456",
+    "endereco": "Rua Theophilo Zanutto 321"
+  }
+###
+
+PATCH  {{baseUrl}}/user/addRole/e88fda3d-22e4-49bb-9257-5bc2f4c0a783
+Content-Type: application/json
+
+###
+DELETE  {{baseUrl}}/user/remove/b0e06cc1-c202-43a9-94d7-85fac80a286a
+
+# @name RoleController
+###
+POST {{baseUrl}}/role/create
+Content-Type: application/json
+
+ {
+    "name": "EDITOR"
+
+  }
+###
+GET {{baseUrl}}/role/list
+
+###
